@@ -56,7 +56,7 @@ public class DataStructureTest {
     }
 
     @Test
-    public void testStack2Queue(){
+    public void testStack2Queue() {
         Stack2Queue<String> queue = new Stack2Queue<>();
         queue.offer("01");
         queue.offer("02");
@@ -68,7 +68,7 @@ public class DataStructureTest {
     }
 
     @Test
-    public void testPriorityQueue(){
+    public void testPriorityQueue() {
         Queue<String> pq = new PriorityQueue<>(2);
         pq.offer("01");
         pq.offer("02");

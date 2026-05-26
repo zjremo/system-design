@@ -31,7 +31,7 @@ public class HeapOperations {
         }
 
 /*
-        for (int i = (arr.length >>> 1) + 1; i >= 0; --i) {
+        for (int i = (arr.length >>> 1) - 1; i >= 0; --i) {
             heapify(arr, i, arr.length);
         }
 */
