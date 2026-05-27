@@ -7,6 +7,8 @@ import net.jrz.dataStructure.linked_list.List;
 import net.jrz.dataStructure.queue.queue.PriorityQueue;
 import net.jrz.dataStructure.queue.queue.Queue;
 import net.jrz.dataStructure.queue.stack2queue.Stack2Queue;
+import net.jrz.dataStructure.stack.ArrayDeque;
+import net.jrz.dataStructure.stack.Deque;
 import org.junit.Test;
 
 public class DataStructureTest {
@@ -80,5 +82,43 @@ public class DataStructureTest {
         System.out.println(pq.peek());
     }
 
+    private String trim(String s) {
+        // " hello world   "
+        int len = s.length();
+        int st = 0;
 
+        while ((st < len) && (s.charAt(st) <= ' ')) {
+            ++st;
+        }
+
+        while ((st < len) && (s.charAt(len - 1) <= ' ')) {
+            --len;
+        }
+
+        return ((st != 0) || (len != s.length())) ? s.substring(st, len) : s;
+    }
+
+    @Test
+    public void testString() {
+        String s = "   hello world    ";
+        System.out.println("Before trim operation, the s is : \"" + s + "\"");
+        System.out.println("After trim operation, the s is : \"" + trim(s) + "\"");
+    }
+
+    @Test
+    public void testArrayDeque(){
+        Deque<Integer> deque = new ArrayDeque<>();
+        System.out.println(deque.isEmpty());
+        deque.push(0);
+        deque.push(1);
+        deque.push(2);
+        deque.push(3);
+        System.out.println(deque.peek());
+        deque.push(4);
+        deque.push(5);
+        deque.push(6);
+        System.out.println(deque.peek());
+        System.out.println(deque.pop());
+        System.out.println(deque.peek());
+    }
 }
